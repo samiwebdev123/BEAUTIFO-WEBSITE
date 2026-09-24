@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --color-brand-pink: #F7D6DC;
+  --color-brand-softpink: #FDF4F5;
+  --color-brand-rose: #E3889B;
+  --color-brand-dark: #1F1F1F;
+}
+
+:root {
+  --color-brand-pink: #F7D6DC;
+  --color-brand-softpink: #FDF4F5;
+  --color-brand-rose: #E3889B;
+  --color-brand-dark: #1F1F1F;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: #2D2D2D;
+  background-color: #FFFFFF;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-serif-title {
+  font-family: var(--font-serif);
+}
+
+.font-editorial {
+  font-family: var(--font-display);
+}
+

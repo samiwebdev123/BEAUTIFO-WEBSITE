@@ -1,0 +1,6 @@
+{
+  "name": "Beautifo - Luxury Beauty Store",
+  "description": "Premium makeup and beauty cosmetics store featuring luxury skincare, cosmetic powders, creams, and beauty essentials.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
