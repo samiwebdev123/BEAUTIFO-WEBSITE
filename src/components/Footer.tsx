@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, Mail, Facebook, Twitter, Linkedin, Youtube, Pin } from 'lucide-react';
+import { Phone, Mail, Facebook, Twitter, Linkedin, Youtube, Pin, MessageCircle } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   return (
@@ -36,12 +36,15 @@ export const Footer: React.FC = () => {
                 <span className="font-semibold text-[#1A1A1A]">Sami Raza</span>
               </div>
               <div>
-                <span className="text-[11px] text-[#777777] block font-medium">Contact:</span>
+                <span className="text-[11px] text-[#777777] block font-medium">WhatsApp:</span>
                 <a
-                  href="tel:03112989025"
-                  className="inline-flex items-center gap-1.5 font-semibold text-[#1A1A1A] hover:text-[#E3889B] transition-colors"
+                  href="https://wa.me/923112989025"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 font-semibold text-[#1A1A1A] hover:text-[#25D366] transition-colors"
+                  title="Direct WhatsApp"
                 >
-                  <Phone className="w-3.5 h-3.5 text-[#E3889B] shrink-0" />
+                  <MessageCircle className="w-3.5 h-3.5 text-[#25D366] shrink-0" />
                   <span>03112989025</span>
                 </a>
               </div>
@@ -102,7 +105,9 @@ export const Footer: React.FC = () => {
               {['Contact Us', 'Delivery', 'Returns', 'My Account', 'Rewards'].map((link) => (
                 <li key={link}>
                   <a
-                    href={link === 'Contact Us' ? 'tel:03112989025' : '#'}
+                    href={link === 'Contact Us' ? 'https://wa.me/923112989025' : '#'}
+                    target={link === 'Contact Us' ? '_blank' : undefined}
+                    rel={link === 'Contact Us' ? 'noopener noreferrer' : undefined}
                     className="hover:text-[#E3889B] transition-colors"
                   >
                     {link}

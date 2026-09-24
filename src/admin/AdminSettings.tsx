@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Shield, Key, Globe, Check, Palette, Sparkles, Terminal, UserCheck, Phone } from 'lucide-react';
+import { Shield, Key, Globe, Check, Palette, Sparkles, Terminal, UserCheck, Phone, MessageCircle } from 'lucide-react';
 import { getAdminOwner, saveAdminOwner, AdminOwnerInfo } from './adminData';
 
 export const AdminSettings: React.FC = () => {
@@ -62,7 +62,7 @@ export const AdminSettings: React.FC = () => {
 
             <div>
               <label className="block text-neutral-700 font-semibold mb-1.5 uppercase tracking-wider text-[10px]">
-                Phone
+                WhatsApp
               </label>
               <div className="relative">
                 <input
@@ -72,14 +72,17 @@ export const AdminSettings: React.FC = () => {
                   className="w-full px-3.5 py-2.5 rounded-xl border border-[#F7D6DC] bg-[#FAF5F6] text-neutral-800 font-mono font-medium focus:bg-white focus:outline-hidden focus:border-[#E3889B]"
                 />
                 <a
-                  href={`tel:${ownerInfo.phone}`}
+                  href="https://wa.me/923112989025"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="absolute right-3 top-1/2 -translate-y-1/2 text-[10px] font-mono text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded border border-emerald-200 hover:bg-emerald-100 transition-colors flex items-center gap-1"
+                  title="Open WhatsApp"
                 >
-                  <Phone className="w-3 h-3 text-emerald-600" />
-                  <span>Call</span>
+                  <MessageCircle className="w-3 h-3 text-emerald-600" />
+                  <span>WhatsApp</span>
                 </a>
               </div>
-              <p className="text-[10px] text-neutral-500 mt-1">Phone: <a href={`tel:${ownerInfo.phone}`} className="font-semibold text-neutral-800 hover:text-[#E3889B] transition-colors">{ownerInfo.phone}</a></p>
+              <p className="text-[10px] text-neutral-500 mt-1">WhatsApp: <a href="https://wa.me/923112989025" target="_blank" rel="noopener noreferrer" className="font-semibold text-neutral-800 hover:text-[#25D366] transition-colors">{ownerInfo.phone}</a></p>
             </div>
           </div>
         </div>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Search, User, Heart, ShoppingBag, Menu, X, ChevronDown, Sparkles } from 'lucide-react';
+import { Search, User, Heart, ShoppingBag, Menu, X, ChevronDown, Sparkles, MessageCircle } from 'lucide-react';
 
 interface NavbarProps {
   cartCount: number;
@@ -45,11 +45,42 @@ export const Navbar: React.FC<NavbarProps> = ({
 
   return (
     <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md transition-all duration-200 border-b border-[#F4F4F6]">
+      {/* Slim Top WhatsApp Contact Bar matching BEAUTIFO theme */}
+      <div className="bg-[#FAF5F6] border-b border-[#F7D6DC]/80 py-1 px-4 text-center text-[11px] text-[#444444]">
+        <div className="max-w-7xl mx-auto flex items-center justify-between">
+          <div className="flex items-center gap-1.5 mx-auto sm:mx-0 font-medium">
+            <span className="text-[#666666]">WhatsApp:</span>
+            <a
+              href="https://wa.me/923112989025"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-[#1F1F1F] hover:text-[#25D366] transition-colors inline-flex items-center gap-1 font-mono tracking-tight"
+              title="Chat on WhatsApp"
+            >
+              <MessageCircle className="w-3.5 h-3.5 text-[#25D366] shrink-0" />
+              <span>03112989025</span>
+            </a>
+          </div>
+          <div className="hidden sm:flex items-center gap-2 text-[10px] text-[#888888] tracking-widest uppercase font-mono">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#25D366] animate-pulse"></span>
+            <span>Customer WhatsApp Support</span>
+          </div>
+        </div>
+      </div>
+
       {/* 1. Top Announcement Bar */}
       <div className="border-b border-[#F0F0F2] bg-[#FFFFFF] py-2 px-4 text-center text-[11px] font-medium tracking-[0.14em] text-[#333333] transition-colors">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <div className="hidden sm:block text-[10px] text-[#888888] tracking-widest">
-            HOTLINE: (021) 111-88-990
+          <div className="hidden sm:flex items-center gap-1.5 text-[10px] text-[#888888] tracking-widest">
+            <span>WHATSAPP:</span>
+            <a
+              href="https://wa.me/923112989025"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-[#111111] hover:text-[#25D366] transition-colors"
+            >
+              03112989025
+            </a>
           </div>
           <div className="mx-auto flex items-center gap-1.5">
             <span>FREE STANDARD SHIPPING ON ALL PAKISTAN ORDERS.</span>
@@ -207,6 +238,19 @@ export const Navbar: React.FC<NavbarProps> = ({
                 {item.hasDropdown && <ChevronDown className="w-4 h-4 text-neutral-400" />}
               </a>
             ))}
+
+            <div className="pt-2 pb-1 border-b border-neutral-100 flex items-center justify-between text-xs">
+              <span className="text-neutral-500">WhatsApp:</span>
+              <a
+                href="https://wa.me/923112989025"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-[#1F1F1F] hover:text-[#25D366] transition-colors flex items-center gap-1.5 font-mono"
+              >
+                <MessageCircle className="w-3.5 h-3.5 text-[#25D366]" />
+                <span>03112989025</span>
+              </a>
+            </div>
 
             <div className="pt-4 flex items-center justify-between text-xs text-neutral-500">
               <button

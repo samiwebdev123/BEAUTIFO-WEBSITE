@@ -11,6 +11,7 @@ import {
   X,
   Sparkles,
   ShieldCheck,
+  MessageCircle,
 } from 'lucide-react';
 
 interface AdminLayoutProps {
@@ -86,7 +87,15 @@ export const AdminLayout: React.FC<AdminLayoutProps> = ({
               OWNER
             </span>
             <p className="text-[11px] font-semibold text-neutral-900 leading-tight">Sami Raza</p>
-            <p className="text-[9px] text-neutral-500 font-mono leading-none">03112989025</p>
+            <a
+              href="https://wa.me/923112989025"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[9px] text-neutral-500 font-mono leading-none hover:text-[#25D366] transition-colors block"
+              title="WhatsApp: 03112989025"
+            >
+              03112989025
+            </a>
           </div>
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
@@ -165,10 +174,14 @@ export const AdminLayout: React.FC<AdminLayoutProps> = ({
             </span>
             <p className="text-xs font-semibold text-neutral-900 truncate mt-0.5">Sami Raza</p>
             <a
-              href="tel:03112989025"
-              className="text-[10px] text-neutral-500 font-mono hover:text-[#E3889B] transition-colors truncate block"
+              href="https://wa.me/923112989025"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[10px] text-neutral-500 font-mono hover:text-[#25D366] transition-colors truncate flex items-center gap-1"
+              title="WhatsApp: 03112989025"
             >
-              03112989025
+              <MessageCircle className="w-3 h-3 text-[#25D366]" />
+              <span>03112989025</span>
             </a>
           </div>
         </div>
@@ -246,11 +259,14 @@ export const AdminLayout: React.FC<AdminLayoutProps> = ({
                 </span>
                 <p className="text-xs font-semibold text-neutral-900 leading-tight mt-0.5">Sami Raza</p>
                 <a
-                  href="tel:03112989025"
-                  className="text-[10px] text-neutral-500 font-mono hover:text-[#E3889B] transition-colors leading-tight block"
-                  title="Call Owner"
+                  href="https://wa.me/923112989025"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[10px] text-neutral-500 font-mono hover:text-[#25D366] transition-colors leading-tight flex items-center gap-1"
+                  title="WhatsApp: 03112989025"
                 >
-                  03112989025
+                  <MessageCircle className="w-3 h-3 text-[#25D366]" />
+                  <span>03112989025</span>
                 </a>
               </div>
             </div>
